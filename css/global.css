@@ -1,0 +1,201 @@
+/* ==========================================================================
+   Global Variables & Theme (Corporate / Professional)
+   ========================================================================== */
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --transition-speed: 0.25s;
+}
+
+/* LIGHT THEME (Corporate Clean) */
+[data-theme='light'] {
+  --background: #ffffff;
+  --foreground: #1e293b;
+  --primary: #0f172a; /* Deep Navy / Charcoal */
+  --primary-hover: #334155;
+  --secondary: #2563eb; /* Corporate Blue Accent */
+  --secondary-hover: #1d4ed8;
+  --text-muted: #64748b;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* DARK THEME (Sleek Midnight) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --primary: #ffffff;
+    --primary-hover: #e2e8f0;
+    --secondary: #3b82f6; 
+    --secondary-hover: #60a5fa;
+    --text-muted: #94a3b8;
+    --surface: #1e293b;
+    --border: #334155;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+[data-theme='dark'] {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --primary: #ffffff;
+  --primary-hover: #e2e8f0;
+  --secondary: #3b82f6; 
+  --secondary-hover: #60a5fa;
+  --text-muted: #94a3b8;
+  --surface: #1e293b;
+  --border: #334155;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+  color: var(--secondary-hover);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+  color: var(--primary);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Professional Card Style (replaces glass-panel) */
+.pro-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.pro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Highlight Text (replaces gradient text) */
+.text-highlight {
+  color: var(--secondary);
+}
+
+/* Animations (Scroll Triggered) */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delays for Grids */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Immediate Hero Fade */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Standard Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px; /* Professional square corners */
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-hover);
+  color: #ffffff;
+}
+
+[data-theme='dark'] .btn-primary {
+  color: #0f172a;
+}
+[data-theme='dark'] .btn-primary:hover {
+  color: #0f172a;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 2px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface);
+  border-color: var(--secondary);
+  color: var(--secondary);
+}

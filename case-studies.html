@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Studies | DigiWebLink</title>
+  <meta name="description" content="Discover how we've helped businesses achieve explosive growth through data-driven digital marketing.">
+  
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout/header.css">
+  <link rel="stylesheet" href="css/layout/footer.css">
+  <link rel="stylesheet" href="css/pages/case-studies.css">
+  
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme) { document.documentElement.setAttribute('data-theme', savedTheme); } 
+        else { document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo"><span class="text-highlight">Digi</span>WebLink</a>
+      <nav class="nav-links">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="case-studies.html" class="nav-link">Case Studies</a>
+      </nav>
+      <div class="header-actions">
+        <a href="contact.html" class="btn btn-primary">Get a Proposal</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-wrapper container animate-fade-in">
+    <section class="case-studies-header">
+      <h1 class="about-title">Our <span class="text-highlight">Case Studies</span></h1>
+      <p class="about-subtitle" style="margin: 0 auto 4rem; max-width: 600px;">
+        Real results for real clients. See how we transform digital presence into measurable revenue.
+      </p>
+      
+      <div class="case-studies-grid">
+        <div class="pro-card case-study-card scroll-animate delay-1">
+          <h3>E-Commerce Brand X</h3>
+          <h4>200% Increase in Organic Traffic</h4>
+          <p>By implementing a complete technical SEO overhaul and content strategy, we doubled their organic revenue in 6 months.</p>
+          <button class="btn btn-secondary">Read Full Story</button>
+        </div>
+
+        <div class="pro-card case-study-card scroll-animate delay-2">
+          <h3>Tech Startup Y</h3>
+          <h4>3x Lower Cost Per Acquisition</h4>
+          <p>We restructured their PPC campaigns and optimized landing pages to drastically improve conversion rates.</p>
+          <button class="btn btn-secondary">Read Full Story</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2 class="footer-logo"><span class="text-highlight">Digi</span>WebLink</h2>
+          <p class="footer-desc">Your partner in digital growth. We build strategies that perform and designs that inspire.</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Services</h4>
+          <ul>
+            <li><a href="seo-optimization.html">SEO Optimization</a></li>
+            <li><a href="social-media.html">Social Media</a></li>
+            <li><a href="ppc-campaigns.html">PPC Campaigns</a></li>
+            <li><a href="content-strategy.html">Content Strategy</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-heading">Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DigiWebLink. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

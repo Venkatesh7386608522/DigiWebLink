@@ -1,0 +1,71 @@
+/* ==========================================================================
+   About Page Styles
+   ========================================================================== */
+.about-hero {
+  padding: 6rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--surface);
+}
+
+.about-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem 2rem;
+  max-width: 900px;
+}
+
+.about-card {
+  padding: 3rem;
+}
+
+.about-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-card p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.about-card ul {
+  list-style-type: none;
+}
+
+.about-card li {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.7;
+}
+
+.about-card li::before {
+  content: '■'; /* Professional solid square bullet */
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-size: 0.8rem;
+  top: 0.4rem;
+}
+
+.about-card li strong {
+  color: var(--foreground);
+}

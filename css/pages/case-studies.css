@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Case Studies Page Styles
+   ========================================================================== */
+.case-studies-header {
+  padding: 6rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--surface);
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  padding: 5rem 2rem;
+}
+
+.case-study-card {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-study-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.case-study-card h4 {
+  font-size: 1.25rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.case-study-card p {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  flex-grow: 1;
+}
+
+.case-study-card .btn {
+  align-self: flex-start;
+}
